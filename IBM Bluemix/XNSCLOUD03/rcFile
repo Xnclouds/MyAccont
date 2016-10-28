@@ -1,0 +1,25 @@
+#!/bin/bash
+# This file is used to set up a unix-like command line application to use OpenStack CLI
+# clients. If you do not have an OpenStack CLI client installed use the following link
+# for help to install the client(s) needed:
+# http://docs.openstack.org/developer/python-openstackclient/index.html
+# 
+# Next in your command line application run the command
+#              $ source <path to this file>
+# This will setup your command line applications environment.
+#
+# You should now be able to run commands from OpenStack CLI clients you have installed
+#     For example if you have the glance client installed you can run the command
+#              $ glance image-list
+# This should print the list of images available to you for this project.
+
+export OS_PROJECT_ID=354e37a020754dce8affa490086a26ef
+export OS_USERNAME=ibm03@qq30.cn
+export OS_USER_DOMAIN_NAME=1066707
+export OS_AUTH_URL=https://lon-identity.open.softlayer.com/v3
+export OS_IDENTITY_API_VERSION=3
+export OS_REGION_NAME=london
+# With Keystone you pass the keystone password.
+echo "Please enter your IBM Bluemix Password: "
+read -sr OS_PASSWORD_INPUT
+export OS_PASSWORD=$OS_PASSWORD_INPUT
